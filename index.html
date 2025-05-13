@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Zaddy Richie - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="patternOverlay" aria-hidden="true"></div>
+
+  <nav>
+    <a href="#about" aria-label="Go to About Me section" tabindex="0">About</a>
+    <a href="#projects" aria-label="Go to Portfolio section" tabindex="0">Portfolio</a>
+    <a href="#contact" aria-label="Go to Contact section" tabindex="0">Contact</a>
+  </nav>
+
+  <main role="main" tabindex="0" aria-label="Zaddy Richie Portfolio main content">
+    <h1 class="logo" aria-label="Zaddy Richie Logo with code icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.59 16.34L13.17 12 8.59 7.66 10 6.25l6 6-6 6z"/>
+      </svg>
+      Zaddy Richie
+    </h1>
+
+    <section id="about" tabindex="0" aria-label="About me section">
+      <h2>About Me</h2>
+      <p>Hello! I’m Zaddy Richie, a passionate programmer who loves crafting elegant code and creative digital solutions. With deep experience in modern web development, I enjoy turning ideas into real world projects.</p>
+    </section>
+
+    <section id="projects" tabindex="0" aria-label="Portfolio projects list">
+      <h2>Portfolio</h2>
+      <ul>
+        <li tabindex="0" role="button" aria-pressed="false" onclick="alert('Project One - Responsive Website\nA modern responsive site with sleek design and animations.')">Project One - Responsive Website</li>
+        <li tabindex="0" role="button" aria-pressed="false" onclick="alert('Project Two - JavaScript Game\nAn interactive browser game with smooth controls and graphics.')">Project Two - JavaScript Game</li>
+        <li tabindex="0" role="button" aria-pressed="false" onclick="alert('Project Three - API Development\nRobust RESTful API with Node.js and Express.')">Project Three - API Development</li>
+        <li tabindex="0" role="button" aria-pressed="false" onclick="alert('Project Four - Mobile App Design\nIntuitive mobile app interfaces designed for user experience.')">Project Four - Mobile App Design</li>
+      </ul>
+    </section>
+
+    <section id="contact" tabindex="0" aria-label="Contact me section">
+      <h2>Contact Me</h2>
+      <p>You can reach me on these platforms:</p>
+      <a href="https://t.me/Hmmletts" aria-label="Send Username to Daddy Richie" target="_blank" rel="noopener noreferrer">Telegram</a><br>
+      <a href="https://wa.me/447768540300" aria-label="Whatsapp Account Zaddy Richie" target="_blank" rel="noopener noreferrer">Whatsapp</a><br>
+      <a href="https://t.me/richieishimx" aria-label="Channel Telegram Profil" target="_blank" rel="noopener noreferrer">Channel</a>
+    </section>
+  </main>
+
+  <footer aria-label="Copyright">
+    © 2025
+  </footer>
+
+  <script>
+    document.querySelectorAll('#projects ul li').forEach(item => {
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
